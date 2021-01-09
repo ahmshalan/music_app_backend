@@ -8,6 +8,6 @@ const router = express.Router();
 router.get("/:trackID", trackController.getTrack);
 router.post("/", trackController.postTrack);
 
-router.post("/favourite/:userId/:trackId", trackController.postFavourite);
+// router.post("/favourite/:userId/:trackId", trackController.postFavourite);
 
 module.exports = router;
