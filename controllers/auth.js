@@ -75,10 +75,10 @@ exports.login = (req, res, next) => {
         error.statusCode = 401;
         throw error;
       }
-      const token = jwt(
+      const token = jwt.sign(
         {
           email: loadedUser.email,
-          userId: loadedUser.userId.toString(),
+          userId: loadedUser._id.toString(),
         },
         "secret",
         { expiresIn: "1h" }
